@@ -23,3 +23,25 @@ I checked the issue comments and cohort ledger and am comfortable with the numbe
 **Setup confirmation:** [y] App runs locally at `localhost:5173`
 
 **Cohort ledger:** [y] Issue added to cohort ledger
+
+## Week 8 – Reproduction & solution planning
+
+**Reproduction commit link:** [https://github.com/dtkachepa/pathreview/tree/fix/153-handle-none-context-text]
+
+**Reproduction summary:**
+
+I ran the existing `test_none_context_chunk_text` test with a context chunk containing
+`{"text": None}`, and it failed with the confirmed
+`TypeError: sequence item 0: expected str instance, NoneType found` at the `" ".join(...)`
+operation in `rag/evaluator/faithfulness_checker.py`.
+
+Exact focused command used to reproduce it:
+
+```
+python -m pytest tests/unit/test_faithfulness_checker.py::TestFaithfulnessChecker::test_none_context_chunk_text -q
+```
+
+**PLAN.md link:** [https://github.com/dtkachepa/pathreview/blob/fix/153-handle-none-context-text/PLAN.md]
+
+**Blockers or open questions:**
+No blockers or open questions
