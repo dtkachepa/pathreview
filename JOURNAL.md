@@ -68,16 +68,26 @@ None currently.
 
 ### Check-in 2 (end of week)
 
-**PR link:** [link to your submitted pull request]
+**PR link:** https://github.com/ascherj/pathreview/pull/664
 
 **Branch:** `fix/153-handle-none-context-text`
 
 **What you built:**
-[1–3 sentences summarizing what your fix does and how it works]
+Updated the faithfulness checker to convert missing or `None` chunk text to an
+empty string before joining the retrieved context. This prevents the existing
+`TypeError` while preserving valid text from the other context chunks.
 
 **Tests added or updated:**
-[Which test files did you touch? What do they cover?]
+No test files were modified because the repository already contained
+`TestFaithfulnessChecker::test_none_context_chunk_text`. The regression test
+previously failed with a `TypeError` and now passes. The related
+missing-text-key test also passes.
 
 **Self-review confirmation:** [ ] make check passes  [ ] make test-unit passes
+
+Both repository-wide commands continue to report known pre-existing failures.
+The full unit result improved from 375 passed and 53 failed to 376 passed and
+52 failed, and `make check` remained at the pre-change baseline of 182 lint
+errors.
 
 **Draft PR feedback received from:** none
