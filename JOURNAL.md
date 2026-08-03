@@ -45,3 +45,39 @@ python -m pytest tests/unit/test_faithfulness_checker.py::TestFaithfulnessChecke
 
 **Blockers or open questions:**
 No blockers or open questions
+
+## Week 9 - Solution building & PR submission
+
+### Check-in 1 (mid-week)
+
+**Current progress:**
+Completed PLAN.md subtasks 1-3: implemented the null-safe context-text coercion in
+`rag/evaluator/faithfulness_checker.py`, ran the existing
+`test_none_context_chunk_text` regression test successfully, and ran the complete
+faithfulness-checker test module. The implementation is complete and remains limited to
+handling a context chunk whose `text` value is `None`.
+
+**Next steps:**
+Review the diff, commit and push the branch, open a draft PR, request and address
+feedback, rerun the checks and finalize the PR.
+
+**Blockers:**
+None currently.
+
+---
+
+### Check-in 2 (end of week)
+
+**PR link:** [link to your submitted pull request]
+
+**Branch:** `fix/153-handle-none-context-text`
+
+**What you built:**
+[1–3 sentences summarizing what your fix does and how it works]
+
+**Tests added or updated:**
+[Which test files did you touch? What do they cover?]
+
+**Self-review confirmation:** [ ] make check passes  [ ] make test-unit passes
+
+**Draft PR feedback received from:** none
