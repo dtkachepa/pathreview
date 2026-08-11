@@ -91,3 +91,34 @@ The full unit result improved from 375 passed and 53 failed to 376 passed and
 errors.
 
 **Draft PR feedback received from:** none
+
+## Week 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:** [ ] Yes  [x] No — still awaiting review
+
+**Summary of feedback:**
+No reviewer feedback was received.
+
+**How you responded:**
+No changes were needed because no reviewer feedback came in.
+
+---
+
+### Reflection
+
+**What was harder than you expected?**
+Understanding the exact scope of the bug was harder than I expected. I had to distinguish between a context chunk with `text=None` and a chunk that is itself `None`, since they would require different fixes.
+
+**What did you learn about working in a large codebase?**
+I learned that I need to understand the existing code and tests before making changes. A small fix can also be surrounded by unrelated test or lint failures, so it is important to verify what my change actually affects.
+
+**How did AI tools help — and where did they fall short?**
+AI helped me understand unfamiliar code, think through the bug, and plan my implementation. However, I still had to inspect the code, run the tests, and verify the fix myself instead of assuming the AI suggestions were correct.
+
+**What would you do differently if you started over?**
+I would reproduce the bug and inspect the relevant tests earlier before writing the full solution plan. This would make the scope of the issue clearer from the beginning.
+
+**What are you most proud of from this module?**
+I am most proud that I was able to take a real issue, understand the cause, implement a focused fix, add regression coverage, and submit a PR.
